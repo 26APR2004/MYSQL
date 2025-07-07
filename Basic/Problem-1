@@ -1,0 +1,12 @@
+CREATE DATABASE TATA_MOTORS;
+USE TATA_MOTORS;
+
+CREATE TABLE Employee(
+id INT PRIMARY KEY,
+salary INT UNSIGNED ,
+name VARCHAR(20)
+);
+
+INSERT  INTO Employee ( id, name, salary) VALUES ( 1,"Adam", 25000),(2,"Bob",30000),(3,"Casey",40000);
+
+SELECT * FROM Employee;
