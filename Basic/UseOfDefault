@@ -1,0 +1,12 @@
+	USE College;
+    
+    CREATE TABLE Employee2 (
+    name VARCHAR(20),
+    id INT ,
+    PRIMARY KEY (id,name),
+    salary INT DEFAULT 20000
+    );
+    
+    INSERT INTO Employee2 ( id,name,salary) VALUES (1,"Sujal",23000),(2,"Akash",10000),(3,"Sujal",2000);
+    INSERT INTO Employee2(id,name) VALUES (4,"Bhushan");
+    SELECT * FROM Employee2;
