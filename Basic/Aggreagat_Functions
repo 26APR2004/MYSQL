@@ -1,0 +1,23 @@
+USE College;
+
+CREATE TABLE Class(
+prn VARCHAR(10) PRIMARY KEY,
+name VARCHAR(20) ,
+cgpa INT NOT NULL,
+city VARCHAR(10),
+grade VARCHAR(1)
+);
+
+INSERT INTO Class(prn,name,cgpa,city,grade) VALUES 
+("22UAI072","Sujal Vijay Mane",7.4,"Sangli","B"),
+("22UAI087","Akash Patil",3.2,"Shirala","E"),
+("22UAI088","Anish Patil",6.7,"Sangli","C"),
+("23UAI309","Bhudbhushan Kamle",10.0,"Ichal","O"),
+("22UAI312","Parth Kishrasagar",8.5,"Sangli","A");
+
+
+SELECT MAX(cgpa) FROM Class;
+SELECT AVG(cgpa) FROM Class;
+SELECT COUNT(prn) FROM Class;
+SELECT MIN(cgpa) FROM Class;
+SELECT SUM(cgpa) FROM Class;
