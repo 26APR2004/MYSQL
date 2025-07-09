@@ -1,0 +1,29 @@
+use Network;
+
+
+# 5.Write a MySQL query to create a table countries set a constraint NOT NULL.
+CREATE TABLE IF NOT EXISTS countries_1(
+ country_id INT NOT NULL,
+country_name VARCHAR(20) NOT NULL,
+region_id  VARCHAR(10) NOT NULL
+);
+
+INSERT INTO countries_1 (country_id,country_name,region_id) VALUES (12,"INDIA","IND01"),(13,"America","AM021");
+SELECT * FROM countries_1;
+
+# 6.Write a MySQL query to create a table named jobs including columns job_id, job_title, min_salary, max_salary and check whether the max_salary amount exceeding the upper limit 25000.
+
+CREATE TABLE jobs( 
+job_id INT PRIMARY KEY,
+job_title VARCHAR(50) ,
+min_salary FLOAT DEFAULT 1000,
+max_salary FLOAT DEFAULT 20000 CHECK(max_salary>25000)
+);
+
+INSERT INTO jobs (job_id ,job_title,min_salary,max_salary) VALUES (103,"Web Developer",60000,40000),(104,"Java Developer",6000,40055);
+DROP TABLE jobs;
+SELECT * FROM jobs;
+
+
+
+
