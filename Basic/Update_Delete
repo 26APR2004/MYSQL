@@ -1,0 +1,24 @@
+USE Network;
+
+CREATE TABLE  Student_Data (
+rollno INT PRIMARY KEY,
+name VARCHAR(30) NOT NULL,
+marks INT NOT NULL,
+grade VARCHAR(1) NOT NULL,
+city VARCHAR(20) NOT NULL);
+
+INSERT INTO Student_Data (rollno,name,marks,grade,city) VALUES  (101,"Sujal",87,"A","Sngli"),
+															    (102,"Akash",37,"C","Pune"),
+                                                                (103,"Sujit",97,"O","Sngli"),
+                                                                (104,"Rohit",77,"B","Pune"),
+                                                                (105,"Parth",84,"A","Mumbai"),
+                                                                (106,"Adity",59,"D","Mumbai"),
+                                                                (107,"Chark",65,"D","Pune");
+SET SQL_SAFE_UPDATES=0;   # OFF THE SAFE SYSTEM
+UPDATE Student_Data SET grade="O" WHERE grade="A";
+UPDATE Student_Data SET grade="N" WHERE marks BETWEEN 30 AND 40;
+
+DELETE FROM Student_Data WHERE marks<40;
+
+SELECT * FROM Student_Data;
+
