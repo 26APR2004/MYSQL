@@ -1,0 +1,15 @@
+USE network;
+
+CREATE TABLE department (
+id INT PRIMARY KEY,
+name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE teacher(
+id INT PRIMARY KEY,
+name VARCHAR(50) NOT NULL,
+dep_id INT NOT NULL,
+FOREIGN KEY (dep_id) REFERENCES department(id)
+);
+
+SELECT * FROM department;
