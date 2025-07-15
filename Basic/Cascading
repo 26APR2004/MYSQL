@@ -1,0 +1,31 @@
+CREATE DATABASE Network;
+USE Network;
+
+CREATE TABLE dept_1(
+id INT PRIMARY KEY,
+name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE teacher_1(
+id INT PRIMARY KEY,
+name VARCHAR(50) NOT NULL,
+dep_id INT NOT NULL,
+FOREIGN KEY (dep_id) REFERENCES dept_1(id)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+);
+
+INSERT INTO dept_1 VALUES(102,"Science"),(103,"English"),(101,"Marathi"),(104,"Math");
+DROP TABLE teacher_1;
+
+UPDATE dept_1
+SET id=107
+WHERE id=103;
+
+INSERT INTO teacher_1 VALUES(111,"Sujal",102),(112,"Akash",103),(113,"Parth",101),(114,"Amey",104);
+SELECT * FROM dept_1;
+SELECT * FROM teacher_1;
+
+
+
+
